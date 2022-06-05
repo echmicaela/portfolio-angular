@@ -1,0 +1,157 @@
+/** inicio **/
+.foto {
+  text-align: center;
+  position: relative;
+  display: inline-block;
+}
+
+.foto img {
+  width: 185px;
+  height: 185px;
+  object-fit: cover;
+  border-radius: 50%;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  z-index: 1;
+  position: relative;
+}
+
+.foto img:hover {
+  transform: rotate(-15deg);
+}
+section#inicio {
+  padding-top: 80px;
+  padding-bottom: 140px;
+  position: relative;
+}
+
+.foto::before {
+  content: "";
+  width: 159px;
+  height: 160px;
+  background-image: url(../../../assets/img/hoja1.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  display: block;
+  position: absolute;
+  left: -115px;
+  transform: rotate(-11.61deg);
+  top: -30px;
+  z-index: 0;
+}
+
+.foto::after {
+  content: "";
+  width: 159px;
+  height: 160px;
+  background-image: url(../../../assets/img/hoja2.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  display: block;
+  position: absolute;
+  right: -115px;
+  transform: rotate(-1.61deg);
+  top: -30px;
+  z-index: 0;
+}
+
+#inicio .col-12 {
+  text-align: center;
+}
+
+.logo_grande {
+  width: 244px;
+  max-width: 100%;
+}
+
+.logo_principal {
+  margin-bottom: 40px;
+}
+
+.puesto {
+  font-size: 18px;
+  line-height: 28px;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 52px;
+}
+
+.redes_sociales ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.redes_sociales {
+  margin-bottom: 50px;
+}
+.redes_sociales ul li {
+  display: inline-block;
+  margin-right: 35px;
+}
+
+.redes_sociales ul li:last-child {
+  margin-right: 0;
+}
+
+.redes_sociales path {
+  stroke: var(--iconos);
+  transition: all 0.3s ease;
+}
+
+.redes_sociales a:hover path {
+  stroke: var(--rosa);
+}
+
+section#inicio::before {
+  content: "";
+  width: 182px;
+  height: 175px;
+  background-image: url(../../../assets/img/flor1.svg);
+  background-repeat: no-repeat;
+  background-position: center right;
+  background-size: contain;
+  display: block;
+  position: absolute;
+  bottom: -40px;
+  right: -10px;
+  z-index: 0;
+}
+
+@media (min-width: 576px) {
+  .foto img {
+    width: 225px;
+    height: 225px;
+  }
+
+  .foto::before,
+  .foto::after {
+    width: 189px;
+    height: 190px;
+  }
+  .logo_grande {
+    width: 334px;
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  section#inicio::before {
+    content: "";
+    width: 362px;
+    height: 315px;
+    background-image: url(../../../assets/img/flor1.svg);
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: contain;
+    display: block;
+    position: absolute;
+    bottom: -110px;
+    right: -70px;
+  }
+  section#inicio {
+    padding-bottom: 80px;
+  }
+}

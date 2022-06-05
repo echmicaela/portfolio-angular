@@ -1,0 +1,74 @@
+/** Experiencia **/
+.work_experience_wrapper {
+  background: #ffffff;
+  box-shadow: 0px 5px 20px rgb(187 187 187 / 25%);
+  border-radius: 20px;
+  padding: 30px;
+  margin-bottom: 30px;
+}
+
+.top_content svg path {
+  stroke: var(--rosa);
+}
+
+.top_content svg {
+  width: 45px;
+  height: 45px;
+}
+
+.top_content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+span.work_experience_date {
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--textoclaro);
+}
+
+h3.work_experience_title {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  color: var(--principal);
+  margin-bottom: 5px;
+}
+
+span.work_experience_empresa {
+  font-size: 16px;
+  line-height: 20px;
+  color: var(--principal);
+  margin-bottom: 10px;
+  display: block;
+}
+
+section#experiencia {
+  padding-bottom: 150px;
+  position: relative;
+}
+
+section#experiencia::before {
+  content: "";
+  width: 154px;
+  height: 207px;
+  background-image: url(../../../assets/img/flor3.svg);
+  background-repeat: no-repeat;
+  background-position: center right;
+  background-size: contain;
+  display: block;
+  position: absolute;
+  bottom: 0px;
+  right: -14px;
+}
+
+@media (min-width: 768px) {
+  section#experiencia::before {
+    width: 184px;
+    height: 257px;
+    bottom: -90px;
+    right: -64px;
+  }
+}

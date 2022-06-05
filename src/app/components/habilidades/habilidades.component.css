@@ -1,0 +1,28 @@
+/** Skills **/
+.skills_wrapper {
+  padding-left: 35px;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.skills_wrapper svg {
+  position: absolute;
+  left: 0;
+}
+
+h3.skills_titulo {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 28px;
+  color: var(--principal);
+  margin-bottom: 5px;
+}
+
+span.lenguajes {
+  color: var(--textoclaro);
+}
+
+#skills {
+  padding-bottom: 120px;
+  position: relative;
+}

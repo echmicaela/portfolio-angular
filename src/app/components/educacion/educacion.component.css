@@ -1,0 +1,129 @@
+/** Educación **/
+.divisor_texto {
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  --text-divider-gap: 20px;
+  letter-spacing: 0.1em;
+  font-size: 16px;
+  line-height: 26px;
+  color: var(--principal);
+  margin-bottom: 45px;
+}
+
+.divisor_texto::before,
+.divisor_texto::after {
+  content: "";
+  height: 1px;
+  background-color: var(--principal);
+  flex-grow: 1;
+}
+
+.divisor_texto::before {
+  margin-right: var(--text-divider-gap);
+}
+
+.divisor_texto::after {
+  margin-left: var(--text-divider-gap);
+}
+
+.education_wrapper {
+  padding-left: 60px;
+  position: relative;
+  margin-bottom: 45px;
+}
+
+.education_wrapper svg {
+  width: 45px;
+  height: 45px;
+  position: absolute;
+  left: 0;
+}
+
+.education_wrapper svg path {
+  stroke: var(--rosa);
+}
+
+h3.education_title {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  color: var(--principal);
+  margin-bottom: 10px;
+}
+
+.education_wrapper p {
+  margin-bottom: 10px;
+}
+
+span.education_fecha {
+  color: var(--textoclaro);
+}
+
+.cursos_realizados {
+  column-count: 1;
+  column-gap: 0;
+}
+
+.curso_wrapper {
+  padding-left: 60px;
+  position: relative;
+  margin-bottom: 30px;
+  min-height: 85px;
+}
+
+span.curso_year {
+  position: absolute;
+  left: 0;
+  color: var(--textoclaro);
+  top: 1px;
+}
+
+h3.curso_title {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 28px;
+  color: var(--principal);
+  margin-bottom: 5px;
+  transition: all 0.3s ease;
+}
+
+h3.curso_title:hover {
+  color: var(--rosa);
+}
+
+span.curso_lugar {
+  color: var(--textoclaro);
+}
+
+#educacion {
+  position: relative;
+  padding-bottom: 150px;
+}
+
+#educacion::before {
+  content: "";
+  width: 186px;
+  height: 263px;
+  background-image: url(../../../assets/img/flor4.svg);
+  background-repeat: no-repeat;
+  background-position: center right;
+  background-size: contain;
+  display: block;
+  position: absolute;
+  bottom: -50px;
+  right: -10px;
+}
+
+@media (min-width: 768px) {
+  .cursos_realizados {
+    column-count: 2;
+    column-gap: 20px;
+  }
+  #educacion::before {
+    width: 216px;
+    height: 323px;
+    bottom: -90px;
+    right: -60px;
+  }
+}

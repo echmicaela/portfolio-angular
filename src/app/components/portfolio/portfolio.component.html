@@ -1,0 +1,40 @@
+<section id="portfolio">
+  <div class="container">
+    <div class="row">
+      <app-encabezado title="Portfolio"></app-encabezado>
+
+      <!-- Portfolio loop -->
+      <div
+        class="portfolio_item col-12 col-md-6"
+        *ngFor="let item of portfolioFull; let i = index"
+      >
+        <a
+          [routerLink]="['/portfolio', item.id]"
+          data-id="{{ i }}"
+          class="portfolio_item_a"
+          title="{{ item.title }}"
+        >
+          <div
+            class="portfolio_item_inner"
+            style="
+              background-image: url({{ item.background }});
+            "
+          >
+            <div class="portfolio_inner">
+              <div class="porfolio_top_content">
+                <span class="portfolio_categoria"> {{ item.category }} </span>
+                <h3 class="portfolio_titulo">{{ item.title }}</h3>
+              </div>
+              <button class="button">Ver proyecto</button>
+            </div>
+          </div>
+        </a>
+      </div>
+      <!-- Fin Portfolio loop -->
+
+      <div class="col-12">
+        <a href="#" class="button mt-5">Cargar más</a>
+      </div>
+    </div>
+  </div>
+</section>

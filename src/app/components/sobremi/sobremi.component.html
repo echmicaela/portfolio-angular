@@ -1,0 +1,56 @@
+<section id="sobremi">
+  <div class="container">
+    <div class="row">
+      <app-encabezado title="Sobre mi"></app-encabezado>
+      <div class="col-12 col-md-2">
+        <img
+          class="foto_sobremi"
+          src="{{ fotoSobreMi }}"
+          alt="Micaela Echeverría"
+        />
+      </div>
+      <div class="col-12 col-md-10 flor2">
+        <div class="sobremi_contenedor">
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-5">
+                <p>
+                  {{ textoSobreMi }}
+                </p>
+                <a
+                  href="{{ linkCV }}"
+                  class="button"
+                  download="download"
+                  target="_blank"
+                  title="MicaelaEcheverriaCV"
+                >
+                  Descargar CV
+                </a>
+              </div>
+              <div class="col-12 col-md-7">
+                <div *ngFor="let itemsobremi of sobremi" class="progressbar">
+                  <label
+                    for="{{ itemsobremi.label }}"
+                    class="nombre_especialidad"
+                  >
+                    {{ itemsobremi.titulo }}
+                  </label>
+                  <span class="porcentaje">
+                    {{ itemsobremi.porcentaje }}%
+                  </span>
+                  <progress
+                    id="{{ itemsobremi.label }}"
+                    max="100"
+                    value="{{ itemsobremi.porcentaje }}"
+                  >
+                    {{ itemsobremi.porcentaje }}%
+                  </progress>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,53 @@
+<section id="educacion">
+  <div class="container">
+    <div class="row">
+      <app-encabezado title="Educación"></app-encabezado>
+      <div class="col-12">
+        <div class="education_wrapper" *ngFor="let estudio of estudios">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g id="education">
+              <path
+                id="education_2"
+                d="M12 15C15.866 15 19 11.866 19 8C19 4.13401 15.866 1 12 1C8.13401 1 5 4.13401 5 8C5 11.866 8.13401 15 12 15Z"
+                stroke="black"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                id="education_3"
+                d="M8.21 13.89L7 23L12 20L17 23L15.79 13.88"
+                stroke="black"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </g>
+          </svg>
+          <h3 class="education_title">{{ estudio.place }}</h3>
+          <p>{{ estudio.title }}</p>
+          <span class="education_fecha"> {{ estudio.date }} </span>
+        </div>
+
+        <div class="divisor_texto">CURSOS REALIZADOS</div>
+      </div>
+      <div class="col-12 cursos_realizados">
+        <!-- Curso loop -->
+        <div class="curso_wrapper" *ngFor="let curso of cursos">
+          <span class="curso_year">{{ curso.year }}</span>
+          <h3 class="curso_title">
+            {{ curso.title }}
+          </h3>
+          <span class="curso_lugar">{{ curso.place }}</span>
+        </div>
+        <!-- Fin curso loop -->
+      </div>
+    </div>
+  </div>
+</section>

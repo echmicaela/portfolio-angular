@@ -1,0 +1,56 @@
+/** Idioma **/
+.single-chart {
+  width: 45%;
+  margin: auto;
+  justify-content: space-around;
+  margin-bottom: 40px;
+}
+
+.circular-chart {
+  display: block;
+  margin: 10px auto;
+  max-width: 80%;
+  max-height: 250px;
+}
+
+.circle-bg {
+  fill: none;
+  stroke: var(--fondoinputs);
+  stroke-width: 3.8;
+}
+
+.circle {
+  fill: none;
+  stroke-width: 2.8;
+  stroke-linecap: round;
+  animation: progress 1s ease-out forwards;
+}
+
+@keyframes progress {
+  0% {
+    stroke-dasharray: 0 100;
+  }
+}
+
+.circular-chart.rosa .circle {
+  stroke: var(--rosa);
+}
+
+.percentage {
+  fill: var(--textos);
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.4em;
+  text-anchor: middle;
+}
+
+h3.titulo_idioma {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--principal);
+  margin-bottom: 20px !important;
+}
+
+section#idiomas {
+  padding-bottom: 70px;
+}

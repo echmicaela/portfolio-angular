@@ -1,0 +1,30 @@
+.encabezado {
+  position: relative;
+  margin-bottom: 40px;
+  text-align: left;
+}
+
+.encabezado h2 {
+  font-family: "Bon Vivant", script;
+  font-weight: normal;
+  color: var(--textos);
+  font-size: 52px;
+  z-index: 1;
+  position: relative;
+  line-height: 88px;
+}
+
+.encabezado::before {
+  content: "";
+  width: 130px;
+  height: 130px;
+  display: block;
+  background: url(../../../assets/img/encabezado.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  bottom: 0;
+  left: -10px;
+  z-index: 0;
+}

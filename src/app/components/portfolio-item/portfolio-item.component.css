@@ -1,0 +1,84 @@
+.modalPortfolio {
+  position: fixed;
+  z-index: 999999999999;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px;
+}
+
+.modalPortfolio::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+}
+
+.modalPortfolio .modalInterior {
+  background: var(--fondo);
+  z-index: 9;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgb(0 0 0 / 15%);
+  height: calc(100vh - 20px);
+  position: relative;
+  overflow-y: scroll;
+}
+a.cerrar {
+  font-size: 24px;
+}
+
+.grid-item img {
+  max-width: 100%;
+}
+
+.sticky_section {
+  position: sticky;
+  top: 0;
+  margin-bottom: 20px;
+}
+
+.cerrar path {
+  stroke: var(--rosa);
+}
+
+h3.tituloPortfolio {
+  font-size: 24px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  color: var(--principal);
+}
+
+.grid-item img {
+  margin-bottom: 20px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgb(0 0 0 / 15%);
+}
+
+.modalPortfolio .modalInterior::-webkit-scrollbar {
+  width: 10px;
+  background: transparent;
+}
+
+.modalPortfolio .modalInterior::-webkit-scrollbar-thumb {
+  background: var(--rosa);
+  border-radius: 20px;
+}
+
+@media (min-width: 768px) {
+  .modalPortfolio {
+    padding: 40px;
+  }
+  .modalPortfolio .modalInterior {
+    padding: 60px;
+    height: calc(100vh - 80px);
+  }
+}

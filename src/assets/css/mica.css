@@ -1,0 +1,173 @@
+/* General */
+@font-face {
+  font-family: Montserrat;
+  src: url(../fonts/Montserrat-Regular.woff);
+}
+
+@font-face {
+  font-family: Montserrat;
+  src: url(../fonts/Montserrat-Medium.woff);
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: Montserrat;
+  src: url(../fonts/Montserrat-SemiBold.woff);
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: Bon Vivant;
+  src: url(../fonts/BonVivant-Regular.woff);
+}
+
+*:root {
+  --principal: #7789ae;
+  --textos: #23262c;
+  --rosa: #f1d8e7;
+  --fondo: #fffdfe;
+  --fondoinputs: #f7f7f9;
+  --iconos: #c1badd;
+  --textoclaro: #9fa1a6;
+  --blanco: #ffffff;
+}
+
+*::selection {
+  color: #ffffff;
+  background: var(--rosa);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Montserrat, Helvetica, Arial;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--textos);
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 24px;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+a {
+  color: var(--principal);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+body::-webkit-scrollbar {
+  width: 10px;
+  background: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--rosa);
+  border-radius: 20px;
+}
+
+/* Main content */
+#content {
+  margin-left: auto;
+  background: var(--fondo);
+  padding: 0 20px;
+  overflow-x: hidden;
+}
+
+.button {
+  background: var(--rosa);
+  border-radius: 10px;
+  padding: 10px 30px;
+  letter-spacing: 0.2em;
+  cursor: pointer;
+  text-transform: uppercase;
+  color: var(--textos);
+  font-weight: 500;
+  transition: all 0.3s ease;
+  font-size: 14px;
+  line-height: 22px;
+  border: none;
+  display: inline-block;
+}
+
+.button:hover {
+  background-color: var(--principal);
+  color: var(--blanco);
+}
+
+/* Sidebar */
+#sidebar {
+  height: 100%;
+  z-index: 1;
+  z-index: 999999999999;
+  top: 0;
+  left: 0;
+  background: var(--principal);
+  color: #fff;
+  padding-top: 20px;
+  padding-left: 20px;
+  position: relative;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  position: sticky;
+}
+
+div#sidebar::-webkit-scrollbar {
+  width: 5px;
+  background: transparent;
+}
+
+div#sidebar::-webkit-scrollbar-thumb {
+  background: var(--rosa);
+  border-radius: 20px;
+}
+
+/* Media queries */
+@media (min-width: 576px) {
+  #content {
+    padding: 0 60px;
+  }
+}
+
+@media (min-width: 768px) {
+  .pe-6 {
+    padding-right: 5rem !important;
+  }
+  #sidebar {
+    padding-top: 60px;
+    padding-left: 18px;
+    padding-right: 18px;
+    position: fixed;
+    overflow-x: hidden;
+    padding-bottom: 0;
+  }
+}
+
+@media (min-width: 992px) {
+  #sidebar {
+    padding-top: 60px;
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+}
