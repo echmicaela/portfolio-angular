@@ -6,14 +6,11 @@
       <!-- Portfolio loop -->
       <div
         class="portfolio_item col-12 col-md-6"
-        *ngFor="let item of portfolioFull; let i = index"
+        *ngFor="let item of portfolio"
+        [class.selected]="item === selectedPortfolio"
+        (click)="onSelect(item)"
       >
-        <a
-          [routerLink]="['/portfolio', item.id]"
-          data-id="{{ i }}"
-          class="portfolio_item_a"
-          title="{{ item.title }}"
-        >
+        <a class="portfolio_item_a" title="{{ item.title }}">
           <div
             class="portfolio_item_inner"
             style="
@@ -22,7 +19,9 @@
           >
             <div class="portfolio_inner">
               <div class="porfolio_top_content">
-                <span class="portfolio_categoria"> {{ item.category }} </span>
+                <span class="portfolio_categoria">
+                  {{ item.category }}
+                </span>
                 <h3 class="portfolio_titulo">{{ item.title }}</h3>
               </div>
               <button class="button">Ver proyecto</button>
@@ -32,7 +31,71 @@
       </div>
       <!-- Fin Portfolio loop -->
 
-      <div class="col-12">
+      <div
+        class="modalPortfolio"
+        *ngIf="selectedPortfolio"
+        data-id="{{ selectedPortfolio.id }}"
+      >
+        <div class="container">
+          <div class="row modalInterior">
+            <div class="col-12 col-md-5">
+              <div class="sticky_section">
+                <a class="cerrar" (click)="backToPortfolio()">
+                  <svg
+                    width="25"
+                    height="25"
+                    viewBox="0 0 25 25"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g id="arrow-left">
+                      <path
+                        id="Vector"
+                        d="M19.6528 12.2032H5.65283"
+                        stroke="black"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        id="Vector_2"
+                        d="M12.6528 19.2032L5.65283 12.2032L12.6528 5.20325"
+                        stroke="black"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </g>
+                  </svg>
+                </a>
+                <h3 class="tituloPortfolio">{{ selectedPortfolio.title }}</h3>
+                <p class="description">
+                  {{ selectedPortfolio.description }}
+                </p>
+                <a
+                  *ngIf="selectedPortfolio.link"
+                  href="{{ selectedPortfolio.link }}"
+                  class="button"
+                  target="_blank"
+                  >Ver en vivo</a
+                >
+              </div>
+            </div>
+            <div class="col-12 col-md-7">
+              <div class="gridPortfolio">
+                <div
+                  class="grid-item"
+                  *ngFor="let imagen of selectedPortfolio.masonryItems"
+                >
+                  <img src="{{ imagen.image }}" alt="{{ imagen.imageTitle }}" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 botoncargarmas">
         <a href="#" class="button mt-5">Cargar más</a>
       </div>
     </div>

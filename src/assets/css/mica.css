@@ -143,6 +143,18 @@ div#sidebar::-webkit-scrollbar-thumb {
   border-radius: 20px;
 }
 
+#sidebar {
+  transition: transform 0.4s;
+}
+
+.scroll-down #sidebar {
+  transform: translate3d(0, -100%, 0);
+}
+
+.scroll-up #sidebar {
+  transform: none;
+}
+
 /* Media queries */
 @media (min-width: 576px) {
   #content {

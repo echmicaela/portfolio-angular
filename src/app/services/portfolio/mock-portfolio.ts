@@ -1,15 +1,7 @@
-import { Injectable } from '@angular/core';
+import { Portfolio } from "src/app/portfolio";
 
-@Injectable({
-  providedIn: 'root'
-})
-export class PortfolioDataService {
-
-  constructor() { }
-  
-  portfolioFull(){
-    return [
-      {
+export const PORTFOLIO: Portfolio[] = [
+    {
         id: "0", 
         title: "Frondal Avándaro", 
         background: "assets/img/portfolio/MockupFrondal.jpg", 
@@ -105,7 +97,4 @@ export class PortfolioDataService {
         ],
         link: ''  
       }
-    ]
-  }
-
-}
+];

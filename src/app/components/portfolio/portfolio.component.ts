@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { PortfolioDataService } from 'src/app/services/portfolio/portfolio-data.service';
+import { Portfolio } from 'src/app/portfolio';
+import { PORTFOLIO } from 'src/app/services/portfolio/mock-portfolio';
 
 @Component({
   selector: 'app-portfolio',
@@ -8,15 +9,27 @@ import { PortfolioDataService } from 'src/app/services/portfolio/portfolio-data.
 })
 
 export class PortfolioComponent implements OnInit {
-  portfolioFull: any;
+  
+  portfolio = PORTFOLIO;
+  selectedPortfolio: Portfolio | undefined;
 
-  constructor(private PortfolioData: PortfolioDataService) {
-    //console.log(PortfolioData.portfolioFull());
-    this.portfolioFull = PortfolioData.portfolioFull()
+
+
+  constructor() {
+    
    }
 
   ngOnInit(): void {
     
   }
+
+  onSelect(item: Portfolio): void {
+    this.selectedPortfolio = item;
+  }
+
+  backToPortfolio(): void {
+    this.selectedPortfolio = undefined;
+  }
+
 
 }
